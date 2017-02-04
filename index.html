@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="参考書を書いてみた" class="slide level1">
+<h1>参考書を書いてみた</h1>
+</section>
+<section id="自己紹介" class="slide level1">
+<h1>自己紹介</h1>
+<ul>
+<li>江添亮</li>
+<li>ドワンゴ</li>
+<li>C++標準化委員会委員</li>
+<li><a href="https://github.com/EzoeRyou" class="uri">https://github.com/EzoeRyou</a></li>
+</ul>
+</section>
+<section id="過去の本" class="slide level1">
+<h1>過去の本</h1>
+<p>アスキードワンゴより出版</p>
+<ul>
+<li>C++11/14コア言語</li>
+<li>Bjarne StroustrupのPPPUCの翻訳の監修</li>
+</ul>
+</section>
+<section id="最初の本" class="slide level1">
+<h1>最初の本</h1>
+<ul>
+<li>単一のXHTMLファイルを手書き</li>
+<li>XHTMLの未来をあの頃は信じていた</li>
+</ul>
+</section>
+<section id="想定していた利点" class="slide level1">
+<h1>想定していた利点</h1>
+<ul>
+<li>XMLとしてバリデートできる</li>
+<li>CSSでスタイルを変更できる</li>
+<li>JavaScriptでスクリプト処理もできる</li>
+</ul>
+</section>
+<section id="現実" class="slide level1">
+<h1>現実</h1>
+<ul>
+<li>XHTML手書きは辛い</li>
+<li>些細な文法ミスでエラー</li>
+<li>意味的に間違っているのにマークアップに問題はないため発見できなかったエラー</li>
+<li>そして何より</li>
+</ul>
+</section>
+<section id="巨大ファイル" class="slide level1">
+<h1>巨大ファイル</h1>
+<ul>
+<li>1MBを超えるファイルサイズ</li>
+<li>vimのような優秀なテキストエディターが必要</li>
+<li>1MBを超えるとGitHubのWebページ上で編集できない</li>
+<li>1MBを超えるとPRがなくなった</li>
+</ul>
+</section>
+<section id="編集者を困らせる" class="slide level1">
+<h1>編集者を困らせる</h1>
+<ul>
+<li>「これソースないんですか？」</li>
+<li>「え、これがソース」</li>
+<li>「仕方ないなぁ、sedで加工しました」</li>
+</ul>
+</section>
+<section id="教訓" class="slide level1">
+<h1>教訓</h1>
+<p>ソースコードは分割しよう</p>
+</section>
+<section id="監修" class="slide level1">
+<h1>監修</h1>
+<ul>
+<li>アスキードワンゴから出版された</li>
+<li>C++によるプログラミングの原則と実践</li>
+<li>Programming Principles and Practice Using C++</li>
+<li>Bjarne Stroustrup著</li>
+</ul>
+<p>翻訳の監修をした</p>
+</section>
+<section id="そびえ立つクソ" class="slide level1">
+<h1>そびえ立つクソ</h1>
+</section>
+<section id="無駄に冗長" class="slide level1">
+<h1>無駄に冗長</h1>
+<p>あまりの長さにC++界隈では</p>
+<p>「人を殴り殺せる鈍器本」</p>
+<p>と呼ばれている</p>
+</section>
+<section id="難解" class="slide level1">
+<h1>難解</h1>
+<ul>
+<li>人間が読める文章量は有限である</li>
+<li>簡潔に越したことはない</li>
+</ul>
+</section>
+<section id="テスト" class="slide level1">
+<h1>テスト？</h1>
+<p>なにそれ美味しいの？</p>
+<ul>
+<li>サンプルコードの数割がコンパイルエラー</li>
+<li>しかも大半はtypo</li>
+</ul>
+<p>お粗末極まりない。</p>
+</section>
+<section id="経緯" class="slide level1">
+<h1>経緯</h1>
+<ul>
+<li>もともとC++11用に2009年ごろに書かれた</li>
+<li>C++14対応をするために全面的に手で修正した</li>
+<li>サンプルコードに対する自動的なテストが書かれていない</li>
+</ul>
+</section>
+<section id="テストを書け" class="slide level1">
+<h1>テストを書け</h1>
+</section>
+<section id="間違いの数々" class="slide level1">
+<h1>間違いの数々</h1>
+<ul>
+<li>C++の正規表現はUnicodeをサポートしている</li>
+<li>localeで中国語やマラヤーラム文字をサポートできる</li>
+<li>暗黙の型変換の使い過ぎによる間違い</li>
+<li>規格の破壊的変更の巻き添え</li>
+</ul>
+</section>
+<section id="文字は1バイト" class="slide level1">
+<h1>1文字は1バイト</h1>
+<p>テキストファイルの最初の4バイトは4文字である。</p>
+</section>
+<section id="教訓-1" class="slide level1">
+<h1>教訓</h1>
+<ul>
+<li class="fragment">文章は簡潔に書け</li>
+<li class="fragment">サンプルコードは自動でテストしろ</li>
+<li class="fragment">C++は完全に理解しろ</li>
+</ul>
+</section>
+<section id="本題" class="slide level1">
+<h1>本題</h1>
+<p>執筆環境</p>
+</section>
+<section id="大まかな流れ" class="slide level1">
+<h1>大まかな流れ</h1>
+<ol type="1">
+<li>markdownで書く</li>
+<li>テスト</li>
+<li>pandocでフォーマット変換</li>
+<li>tex/html</li>
+<li>編集者の職人作業</li>
+<li>製本</li>
+</ol>
+</section>
+<section id="markdown" class="slide level1">
+<h1>markdown</h1>
+<ul>
+<li>Aaron Swartzの遺産</li>
+<li>あまり好きじゃない</li>
+<li>必要な機能はある。</li>
+</ul>
+</section>
+<section id="aaron-swartz" class="slide level1">
+<h1>Aaron Swartz</h1>
+<ul>
+<li>(1986-11-08 - 2013-01-11)</li>
+<li>markdownを考案</li>
+<li>論文を自由にするために尽力した偉人</li>
+<li>論文を不自由にしたい極悪人どもによって自殺に追い込まれる</li>
+<li>ゲリラ・オープン・アクセス・マニフェストを読め</li>
+</ul>
+</section>
+<section id="テスト-1" class="slide level1">
+<h1>テスト</h1>
+<ul>
+<li>簡潔な日本語のテスト</li>
+<li>サンプルコードのテスト</li>
+</ul>
+</section>
+<section id="簡潔な日本語のテスト" class="slide level1">
+<h1>簡潔な日本語のテスト</h1>
+<p>textlint</p>
+<ul>
+<li>日本語を形態素解析して文法判断</li>
+<li>わかりにくい文章を発見できる</li>
+<li>擬陽性多し</li>
+<li>ないよりマシ</li>
+</ul>
+</section>
+<section id="サンプルコードのテスト" class="slide level1">
+<h1>サンプルコードのテスト</h1>
+<p>C++用を自作</p>
+<ul>
+<li>サンプルコードを抽出</li>
+<li>コンパイル</li>
+<li>エラーメッセージを表示</li>
+</ul>
+</section>
+<section id="pandoc" class="slide level1">
+<h1>pandoc</h1>
+<ul>
+<li>多くの入力フォーマットをサポート</li>
+<li>多くの出力フォーマットをサポート</li>
+<li>このスライドもpandocで出力した</li>
+</ul>
+</section>
+<section id="html" class="slide level1">
+<h1>html</h1>
+<ul>
+<li>最も自由ソフトウェアによって実装されている</li>
+<li>極めて移植性のある組版用フォーマット</li>
+</ul>
+</section>
+<section id="tex" class="slide level1">
+<h1>tex</h1>
+<ul>
+<li>極めて醜悪で時代遅れの組版システム</li>
+<li>残念ながら代替品がない</li>
+<li>texかInDesignか好きな方を選べ</li>
+</ul>
+</section>
+<section id="編集者の職人作業" class="slide level1">
+<h1>編集者の職人作業</h1>
+<ul>
+<li><p>商用本としての体裁を整えるには編集者の手作業が必要</p></li>
+<li><p>texだろうがInDesignだろうが変わらない</p></li>
+</ul>
+</section>
+<section id="ファイル分割" class="slide level1">
+<h1>ファイル分割</h1>
+<ul>
+<li>本のソースコードは分割したい</li>
+<li>pandocは入力ファイルを分割できる</li>
+</ul>
+</section>
+<section id="フォーマット変換" class="slide level1">
+<h1>フォーマット変換</h1>
+<p>手作業で行うのは面倒</p>
+<ol type="1">
+<li>markdownが1つでも更新されたら</li>
+<li>テストを実行</li>
+<li>pandocを実行</li>
+<li>htmlやtexを生成</li>
+</ol>
+<p>しかし、どこかで見たような問題</p>
+</section>
+<section id="ビルドシステム" class="slide level1">
+<h1>ビルドシステム</h1>
+<p>プログラマーは解決済み</p>
+<ul>
+<li>GNU Makeを使用</li>
+</ul>
+</section>
+<section id="編集" class="slide level1">
+<h1>編集</h1>
+<p>手作業で行うのは面倒</p>
+<ul>
+<li>履歴</li>
+<li>共同編集</li>
+<li>修正差分</li>
+<li>[最終稿][修正済み]新しい技術書(3).tar.xz</li>
+</ul>
+</section>
+<section id="vcs" class="slide level1">
+<h1>VCS</h1>
+<p>プログラマーは解決済み</p>
+<ul>
+<li>git使え</li>
+</ul>
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
