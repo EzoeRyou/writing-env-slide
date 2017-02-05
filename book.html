@@ -4,14 +4,22 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <meta name="author" content="江添亮" />
+  <meta name="date" content="2017-02-05" />
+  <title>技術書の執筆環境</title>
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
+<div id="header">
+<h1 class="title">技術書の執筆環境</h1>
+<h2 class="author">江添亮</h2>
+<h3 class="date">2017-02-05</h3>
+</div>
 <div id="TOC">
 <ul>
 <li><a href="#参考書を書いてみた">参考書を書いてみた</a></li>
 <li><a href="#自己紹介">自己紹介</a></li>
+<li><a href="#環境">環境</a></li>
 <li><a href="#過去の本">過去の本</a></li>
 <li><a href="#最初の本">最初の本</a></li>
 <li><a href="#想定していた利点">想定していた利点</a></li>
@@ -20,12 +28,12 @@
 <li><a href="#編集者を困らせる">編集者を困らせる</a></li>
 <li><a href="#教訓">教訓</a></li>
 <li><a href="#監修">監修</a></li>
+<li><a href="#bjarne-stroustrup">Bjarne Stroustrup</a></li>
 <li><a href="#そびえ立つクソ">そびえ立つクソ</a></li>
 <li><a href="#無駄に冗長">無駄に冗長</a></li>
 <li><a href="#難解">難解</a></li>
 <li><a href="#テスト">テスト？</a></li>
 <li><a href="#経緯">経緯</a></li>
-<li><a href="#テストを書け">テストを書け</a></li>
 <li><a href="#間違いの数々">間違いの数々</a></li>
 <li><a href="#文字は1バイト">1文字は1バイト</a></li>
 <li><a href="#教訓-1">教訓</a></li>
@@ -34,18 +42,29 @@
 <li><a href="#markdown">markdown</a></li>
 <li><a href="#aaron-swartz">Aaron Swartz</a></li>
 <li><a href="#テスト-1">テスト</a></li>
-<li><a href="#簡潔な日本語のテスト">簡潔な日本語のテスト</a></li>
-<li><a href="#サンプルコードのテスト">サンプルコードのテスト</a></li>
+<li><a href="#簡潔な日本語">簡潔な日本語</a></li>
+<li><a href="#サンプルコード">サンプルコード</a></li>
 <li><a href="#pandoc">pandoc</a></li>
 <li><a href="#html">html</a></li>
 <li><a href="#tex">tex</a></li>
 <li><a href="#編集者の職人作業">編集者の職人作業</a></li>
+<li><a href="#製本">製本</a></li>
+<li><a href="#流通">流通</a></li>
 <li><a href="#ファイル分割">ファイル分割</a></li>
 <li><a href="#フォーマット変換">フォーマット変換</a></li>
 <li><a href="#ビルドシステム">ビルドシステム</a></li>
 <li><a href="#編集">編集</a></li>
-<li><a href="#vcs">VCS</a></li>
-<li><a href="#section"></a></li>
+<li><a href="#dvcs">DVCS</a></li>
+<li><a href="#技術書を-取り巻く-環境">技術書を<br>取り巻く<br>環境</a></li>
+<li><a href="#読む権利">読む権利</a></li>
+<li><a href="#契約">契約</a></li>
+<li><a href="#不自由な契約">不自由な契約</a></li>
+<li><a href="#本の自由">本の自由</a></li>
+<li><a href="#対策">対策</a></li>
+<li><a href="#技術書の内容">技術書の内容</a></li>
+<li><a href="#金の話">金の話</a></li>
+<li><a href="#非商業主義">非商業主義</a></li>
+<li><a href="#対策-1">対策</a></li>
 </ul>
 </div>
 <h1 id="参考書を書いてみた">参考書を書いてみた</h1>
@@ -56,6 +75,12 @@
 <li>C++標準化委員会委員</li>
 <li><a href="https://github.com/EzoeRyou" class="uri">https://github.com/EzoeRyou</a></li>
 </ul>
+<h1 id="環境">環境</h1>
+<ul>
+<li>雇用されてる会社に出版社がある</li>
+<li>編集者が隣の席に座っている</li>
+<li>会社から本を書いてくれと言われている</li>
+</ul>
 <h1 id="過去の本">過去の本</h1>
 <p>アスキードワンゴより出版</p>
 <ul>
@@ -64,6 +89,8 @@
 </ul>
 <h1 id="最初の本">最初の本</h1>
 <ul>
+<li>C++11のコア言語を解説する本</li>
+<li>後でC++14を加筆</li>
 <li>単一のXHTMLファイルを手書き</li>
 <li>XHTMLの未来をあの頃は信じていた</li>
 </ul>
@@ -103,6 +130,11 @@
 <li>Bjarne Stroustrup著</li>
 </ul>
 <p>翻訳の監修をした</p>
+<h1 id="bjarne-stroustrup">Bjarne Stroustrup</h1>
+<ul>
+<li>C++の作者</li>
+<li>最初の実装者</li>
+</ul>
 <h1 id="そびえ立つクソ">そびえ立つクソ</h1>
 <h1 id="無駄に冗長">無駄に冗長</h1>
 <p>あまりの長さにC++界隈では</p>
@@ -126,7 +158,6 @@
 <li>C++14対応をするために全面的に手で修正した</li>
 <li>サンプルコードに対する自動的なテストが書かれていない</li>
 </ul>
-<h1 id="テストを書け">テストを書け</h1>
 <h1 id="間違いの数々">間違いの数々</h1>
 <ul>
 <li>C++の正規表現はUnicodeをサポートしている</li>
@@ -135,7 +166,9 @@
 <li>規格の破壊的変更の巻き添え</li>
 </ul>
 <h1 id="文字は1バイト">1文字は1バイト</h1>
+<blockquote>
 <p>テキストファイルの最初の4バイトは4文字である。</p>
+</blockquote>
 <h1 id="教訓-1">教訓</h1>
 <blockquote>
 <ul>
@@ -174,15 +207,15 @@
 <li>簡潔な日本語のテスト</li>
 <li>サンプルコードのテスト</li>
 </ul>
-<h1 id="簡潔な日本語のテスト">簡潔な日本語のテスト</h1>
+<h1 id="簡潔な日本語">簡潔な日本語</h1>
 <p>textlint</p>
 <ul>
 <li>日本語を形態素解析して文法判断</li>
 <li>わかりにくい文章を発見できる</li>
-<li>擬陽性多し</li>
+<li>偽陽性多し</li>
 <li>ないよりマシ</li>
 </ul>
-<h1 id="サンプルコードのテスト">サンプルコードのテスト</h1>
+<h1 id="サンプルコード">サンプルコード</h1>
 <p>C++用を自作</p>
 <ul>
 <li>サンプルコードを抽出</li>
@@ -208,8 +241,17 @@
 </ul>
 <h1 id="編集者の職人作業">編集者の職人作業</h1>
 <ul>
-<li><p>商用本としての体裁を整えるには編集者の手作業が必要</p></li>
-<li><p>texだろうがInDesignだろうが変わらない</p></li>
+<li>私の仕事ではない</li>
+<li>商用本としての体裁を整えるには編集者の手作業が必要</li>
+<li>texだろうがInDesignだろうが変わらない</li>
+</ul>
+<h1 id="製本">製本</h1>
+<ul>
+<li>私の仕事ではない</li>
+</ul>
+<h1 id="流通">流通</h1>
+<ul>
+<li>GitHubに集金方法がほしい</li>
 </ul>
 <h1 id="ファイル分割">ファイル分割</h1>
 <ul>
@@ -236,13 +278,71 @@
 <li>履歴</li>
 <li>共同編集</li>
 <li>修正差分</li>
-<li>[最終稿][修正済み]新しい技術書(3).tar.xz</li>
+<li>[最終稿][差し戻し修正済み][2017-02-05]新しい技術書(3).tar.xz</li>
 </ul>
-<h1 id="vcs">VCS</h1>
+<p>しかし、どこかで見たような問題</p>
+<h1 id="dvcs">DVCS</h1>
 <p>プログラマーは解決済み</p>
 <ul>
-<li>git使え</li>
+<li>git</li>
+<li>Github</li>
 </ul>
-<h1 id="section"></h1>
+<h1 id="技術書を-取り巻く-環境">技術書を<br>取り巻く<br>環境</h1>
+<h1 id="読む権利">読む権利</h1>
+<p>本の貸し借りは違法となったディストピア小説</p>
+<p><a href="https://www.gnu.org/philosophy/right-to-read.en.html" class="uri">https://www.gnu.org/philosophy/right-to-read.en.html</a></p>
+<p>Richard Stallman著</p>
+<h1 id="契約">契約</h1>
+<ul>
+<li>著作権は出版社が作者から権利を奪い取るために存在する</li>
+<li>出版社は不自由な契約を強いる</li>
+</ul>
+<h1 id="不自由な契約">不自由な契約</h1>
+<ul>
+<li>作者は契約期間中、著作権を排他的、独占的に出版社に代行管理させる</li>
+<li>作者は著作権者であるにもかかわらず自ら著作権を行使できなくなる</li>
+<li>本は不自由になる</li>
+<li>この慣習はあまりに強すぎる</li>
+<li>破壊的革新が起きない限り慣習は変わらない</li>
+</ul>
+<h1 id="本の自由">本の自由</h1>
+<p>なぜ技術書の自由が重要なのか</p>
+<ul>
+<li>紙書籍市場はいずれ崩壊する</li>
+<li>電子書籍市場には不自由なフォーマットとデバイスが蔓延する</li>
+<li>我々は読む権利を失う</li>
+</ul>
+<h1 id="対策">対策</h1>
+<ul>
+<li>本をコピーレフトなライセンスで公開させる</li>
+<li>誰が著作権を持とうが関係ない状態にする</li>
+<li>独自ライセンスではなく既存の有名なライセンスが使いやすい</li>
+<li>GFDL, CC-BY-SA, GPLv3</li>
+<li>拒否する出版社とは契約しない</li>
+</ul>
+<h1 id="技術書の内容">技術書の内容</h1>
+<ul>
+<li>プロプライエタリな技術を解説する価値はない</li>
+<li>プロプライエタリな技術はすぐに価値がなくなる</li>
+<li>価値のない技術の技術書にも価値はない。</li>
+<li>時間、労力、金の無駄である</li>
+</ul>
+<h1 id="金の話">金の話</h1>
+<ul>
+<li>現在、技術書は儲からない</li>
+<li>プロがいなくなる</li>
+<li>平均的な技術書の質が下がる</li>
+<li>技術書の量が減る</li>
+</ul>
+<h1 id="非商業主義">非商業主義</h1>
+<p>適切な市場がないと本はどうなるか</p>
+<ul>
+<li>超高価</li>
+<li>道楽</li>
+<li>スポンサー</li>
+</ul>
+<h1 id="対策-1">対策</h1>
+<p>どうにもならない</p>
+<p>時代の流れに抗うことはできない</p>
 </body>
 </html>

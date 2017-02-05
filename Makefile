@@ -7,7 +7,7 @@ index.html : slide.md
 
 book : book.html
 
-book.html : slide.md
-	pandoc -s --toc --mathjax -o book.html slide.md
+book.html : metadata.md slide.md
+	pandoc -s --toc --mathjax -o book.html metadata.md slide.md
 
-.PHONY : slide book 
+.PHONY : all slide book 
